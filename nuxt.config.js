@@ -2,6 +2,9 @@
 export default {
   mode: 'spa',
   srcDir: 'nuxt/',
+  generate: {
+    dir: 'public'
+  },
   /*
   ** Headers of the page
   */
