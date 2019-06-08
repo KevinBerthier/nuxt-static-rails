@@ -42,6 +42,17 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
+    [
+      "nuxt-compress",
+      {
+        gzip: {
+          cache: true
+        },
+        brotli: {
+          threshold: 10240
+        }
+      }
+    ]
   ],
   /*
   ** Axios module configuration
