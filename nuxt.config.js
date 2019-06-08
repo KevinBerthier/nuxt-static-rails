@@ -5,6 +5,11 @@ export default {
   generate: {
     dir: 'public'
   },
+  render: {
+    static: {
+      maxAge: 1000 * 60 * 60 * 24 * 7
+    }
+  },
   /*
   ** Headers of the page
   */
