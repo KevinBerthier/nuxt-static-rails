@@ -1,0 +1,2 @@
+rails: bundle exec puma -C config/puma.rb
+nuxt: yarn run dev --port 8080
