@@ -2,7 +2,7 @@
   <div class="container">
     <div>
       <logo/>
-      <h1 class="title">nuxt</h1>
+      <h1 class="title">{{hello}}</h1>
       <h2 class="subtitle">My groovy Nuxt.js project</h2>
       <div class="links">
         <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation</a>
@@ -19,6 +19,13 @@ import Logo from '~/components/Logo.vue'
 export default {
   components: {
     Logo
+  },
+  data() {
+    return { hello: '' }
+  },
+  async mounted() {
+    const res = await this.$axios.$get('hello')
+    this.hello = res.msg
   }
 }
 </script>
